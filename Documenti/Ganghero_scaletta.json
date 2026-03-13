@@ -1,0 +1,288 @@
+{
+  "_documentation": {
+    "format": "3LO Project Export v1.0",
+    "description": "Struttura JSON per importazione in 3LO",
+    "fields": {
+      "version": "Versione formato (stringa, es: '1.0')",
+      "project": {
+        "id": "ID univoco progetto (stringa)",
+        "name": "Nome visualizzato (stringa)",
+        "created": "Timestamp creazione (numero, epoch ms)"
+      },
+      "board": "Array colonne, ognuna con {id, title, cards: [{id, text}]}",
+      "cards": "Oggetto metadata card (può essere vuoto {})",
+      "exportedAt": "ISO 8601 timestamp export"
+    },
+    "regole": [
+      "board è array: [{id, title, cards: [...]}]",
+      "cards dentro board ha solo {id, text}",
+      "cards (root) è oggetto metadata: {cardId: {created, modified, note}}",
+      "id progetto univoco, senza spazi",
+      "text supporta emoji e unicode"
+    ]
+  },
+  "version": "1.0",
+  "project": {
+    "id": "ganghero",
+    "name": "Ganghero",
+    "created": 1742588400000
+  },
+  "board": [
+    {
+      "id": "1773420883619",
+      "title": "ISPIRAZIONE E REGOLE GENERALI",
+      "cards": [
+        {
+          "id": "1773420910929",
+          "text": "Fondamenta per sviluppo  Tool che mi permettono di leggere/scrivere file ed eseguire comandi mentre tu vedi le modifiche in VS Code in tempo reale"
+        },
+        {
+          "id": "1773420949133",
+          "text": "Indipendenza dal modello AI — Ganghero funziona con OpenClaw, Ollama, LM Studio — se OpenClaw cambia o diventa inaffidabile, abbiamo alternative"
+        },
+        {
+          "id": "1773420962005",
+          "text": "Mattone per 3LO, AuraWrite e Strudel- on serve slo per Vs COde — i progetti possono usare Ganghero come backend AI"
+        },
+        {
+          "id": "1773420972180",
+          "text": "Integrazione pulita — Nessuna estensione buggata, solo tool che agiscono su file e terminale"
+        }
+      ]
+    },
+    {
+      "id": "col-1",
+      "title": "🔴 FASE 1 - Fondamenta (Avviare per primo)",
+      "cards": []
+    },
+    {
+      "id": "col-6",
+      "title": "✅ Completato FASE1",
+      "cards": [
+        {
+          "id": "card-101",
+          "text": "Creare struttura cartelle Ganghero/"
+        },
+        {
+          "id": "card-102",
+          "text": "Implementare read_file tool"
+        },
+        {
+          "id": "card-103",
+          "text": "Implementare write_file tool"
+        },
+        {
+          "id": "card-104",
+          "text": "Implementare run_terminal tool"
+        },
+        {
+          "id": "card-105",
+          "text": "Creare project_index.md per contesto"
+        }
+      ]
+    },
+    {
+      "id": "col-2",
+      "title": "🟡 FASE 2 - Bridge VS Code (Dopo FASE 1)",
+      "cards": []
+    },
+    {
+      "id": "1773421562229",
+      "title": "Completato FASE2",
+      "cards": [
+        {
+          "id": "card-201",
+          "text": "Creare estensione VS Code minimal"
+        },
+        {
+          "id": "card-202",
+          "text": "Implementare server HTTP locale"
+        },
+        {
+          "id": "card-203",
+          "text": "Implementare bridge API REST"
+        },
+        {
+          "id": "card-204",
+          "text": "Integrare ripgrep per ricerca codice"
+        },
+        {
+          "id": "card-205",
+          "text": "Implementare git patch per modifiche incrementali"
+        }
+      ]
+    },
+    {
+      "id": "col-3",
+      "title": "🟢 FASE 3 - Avanzato (Dopo FASE 1 e 2)",
+      "cards": [
+        {
+          "id": "card-301",
+          "text": "Integrare tree-sitter per parsing AST"
+        },
+        {
+          "id": "card-302",
+          "text": "Costruire knowledge graph del codice"
+        },
+        {
+          "id": "card-303",
+          "text": "Indicizzazione automatica progetto"
+        },
+        {
+          "id": "card-304",
+          "text": "Loop operativo agente (plan → execute → observe → save)"
+        }
+      ]
+    },
+    {
+      "id": "col-4",
+      "title": "⚙️ Setup & Config",
+      "cards": [
+        {
+          "id": "card-401",
+          "text": "Adattatore OpenClaw (default)"
+        },
+        {
+          "id": "card-402",
+          "text": "Adattatore Ollama"
+        },
+        {
+          "id": "card-403",
+          "text": "Adattatore LM Studio"
+        }
+      ]
+    },
+    {
+      "id": "col-5",
+      "title": "📁 Integrazione Progetti",
+      "cards": [
+        {
+          "id": "card-501",
+          "text": "Integrare Ganghero in 3LO"
+        },
+        {
+          "id": "card-502",
+          "text": "Integrare Ganghero in AuraWrite"
+        }
+      ]
+    }
+  ],
+  "cards": {
+    "card-101": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Creare la struttura:\nGanghero/\n├── core/          # Tool indipendenti dal modello\n├── adapters/      # Adattatori per OpenClaw, Ollama, ecc.\n├── projects/      # Configurazioni per progetti specifici\n└── Documenti/     # Chat, riferimenti"
+    },
+    "card-102": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Tool Python per leggere file.\nCodice:\n```python\nfrom pathlib import Path\n\ndef run(path):\n    return Path(path).read_text()\n```\nSalvare in: Ganghero/core/read_file.py"
+    },
+    "card-103": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Tool Python per scrivere file.\nCodice:\n```python\nfrom pathlib import Path\n\ndef run(path, content):\n    Path(path).write_text(content)\n```\nSalvare in: Ganghero/core/write_file.py"
+    },
+    "card-104": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Tool Python per eseguire comandi shell.\nCodice:\n```python\nimport subprocess\n\ndef run(cmd):\n    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)\n    return result.stdout + result.stderr\n```\nSalvare in: Ganghero/core/run_terminal.py"
+    },
+    "card-105": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "File di contesto del progetto.\nEsempio:\n```\nProject: Ganghero\nStructure:\n  core/\n  adapters/\n  projects/\nCommands:\n  pytest\n  npm build\n```"
+    },
+    "card-201": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Estensione TypeScript per VS Code.\nApre server HTTP locale per comunicare con OpenClaw."
+    },
+    "card-202": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Server HTTP su porta locale (es. 12345).\nEndpoint:\n- GET /status\n- POST /file\n- POST /command"
+    },
+    "card-203": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "API REST bridge.\nCodice TypeScript per VS Code extension:\n```typescript\nimport express from 'express';\nconst app = express();\napp.get('/status', ...);\napp.post('/file', ...);\napp.post('/command', ...);\n```"
+    },
+    "card-204": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Ricerca veloce nel codice.\nCodice:\n```python\ndef search(query):\n    return run(f'rg {query}')\n```"
+    },
+    "card-205": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Modifiche incrementali invece di rewrite completo.\nCodice:\n```python\ndef apply_patch(patch):\n    run(f'git apply <<EOF\\n{patch}\\nEOF')\n```"
+    },
+    "card-301": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Parsing AST per funzioni, classi, import.\nUsa tree-sitter per analizzare il codice."
+    },
+    "card-302": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Mappa relazioni tra simboli del codice.\nCostruisce grafo di dipendenze e chiamate."
+    },
+    "card-303": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Indicizzazione automatica del progetto.\nAggiorna l'indice quando il codice cambia."
+    },
+    "card-304": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Loop operativo dell'agente con memoria.\n```python\nwhile True:\n    task = agent.get_task()\n    plan = agent.plan(task)\n    for step in plan:\n        result = tool.run(step.args)\n        agent.observe(result)\n    agent.save_memory()\n```"
+    },
+    "card-401": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Adattatore nativo per OpenClaw.\nUsa i tool esistenti di OpenClaw."
+    },
+    "card-402": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Adattatore per Ollama.\nSupporto modelli locali via API Ollama."
+    },
+    "card-403": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Adattatore per LM Studio.\nSupporto modelli locali via API LM Studio."
+    },
+    "card-501": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Integrare Ganghero come backend AI in 3LO.\nDa fare dopo FASE 1 completata."
+    },
+    "card-502": {
+      "created": 1742588400000,
+      "modified": 1742588400000,
+      "note": "Integrare Ganghero come backend AI in AuraWrite.\nDa fare dopo FASE 1 completata."
+    },
+    "1773420910929": {
+      "created": 1773420910929,
+      "modified": 1773420942970,
+      "note": ""
+    },
+    "1773420949133": {
+      "created": 1773420949133,
+      "modified": 1773420955389,
+      "note": ""
+    },
+    "1773420962005": {
+      "created": 1773420962005,
+      "modified": 1773421961238,
+      "note": ""
+    },
+    "1773420972180": {
+      "created": 1773420972180,
+      "modified": 1773420972180,
+      "note": ""
+    }
+  },
+  "exportedAt": "2026-03-13T17:33:08.054Z"
+}

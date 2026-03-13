@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="ganghero-bridge" Version="0.1.0" Publisher="ganghero"/>
+    <DisplayName>Ganghero Bridge</DisplayName>
+    <Description xml:space="preserve">Bridge HTTP locale per Ganghero - connette OpenClaw a VS Code</Description>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Scope="Global" Version="[1.85.0,)"/>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.VisualStudio.Code" Version="[1.85.0,)"/>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json"/>
+  </Assets>
+</PackageManifest>
