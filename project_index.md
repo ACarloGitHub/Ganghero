@@ -31,6 +31,7 @@ Ganghero/
 | `parse_ast` | `core/parse_ast.py` | Estrae simboli da codice (AST) |
 | `knowledge_graph` | `core/knowledge_graph.py` | Costruisce grafo relazioni codice |
 | `indexer` | `core/indexer.py` | Monitora file e aggiorna grafo automaticamente |
+| `config` | `core/config.py` | Gestione configurazione globale e memoria progetti |
 
 ## Comandi
 

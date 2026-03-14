@@ -130,14 +130,38 @@
       "cards": [
         {
           "id": "card-401",
-          "text": "Adattatore OpenClaw (default)"
+          "text": "✅ Memoria globale (~/.config/ganghero/)"
         },
         {
           "id": "card-402",
-          "text": "Adattatore Ollama"
+          "text": "✅ CLI commands (ganghero status/trust/switch)"
         },
         {
           "id": "card-403",
+          "text": "Whitelist e sandbox mode"
+        },
+        {
+          "id": "card-404",
+          "text": "Cross-platform support (Windows/Mac)"
+        },
+        {
+          "id": "card-405",
+          "text": "Installazione interattiva"
+        },
+        {
+          "id": "card-406",
+          "text": "Apertura file VS Code con sicurezza"
+        },
+        {
+          "id": "card-407",
+          "text": "Adattatore OpenClaw (default)"
+        },
+        {
+          "id": "card-408",
+          "text": "Adattatore Ollama"
+        },
+        {
+          "id": "card-409",
           "text": "Adattatore LM Studio"
         }
       ]
