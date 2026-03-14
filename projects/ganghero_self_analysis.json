@@ -1,0 +1,2357 @@
+{
+  "metadata": {
+    "project_path": "/home/carlo/progetti/Ganghero",
+    "created": "2026-03-14T10:35:56.855937",
+    "languages": [
+      "python"
+    ],
+    "stats": {
+      "total_files": 10,
+      "total_symbols": 159,
+      "total_relations": 167,
+      "files_by_language": {
+        "python": 10
+      }
+    }
+  },
+  "files": {
+    "core/agent_loop.py": {
+      "language": "python",
+      "symbol_count": 35,
+      "symbols": [
+        "core/agent_loop.py::json\nimpor",
+        "core/agent_loop.py::sys\nimpor",
+        "core/agent_loop.py::time\nfrom",
+        "core/agent_loop.py::athlib import Path\nfrom",
+        "core/agent_loop.py::yping import Dict, List, Optional, Callable, Any, Tuple\nfrom",
+        "core/agent_loop.py::atetime import datetime\nfrom",
+        "core/agent_loop.py::ataclasses import dataclass, asdict\n\nsys.",
+        "core/agent_loop.py::ore.config import Config\nfrom",
+        "core/agent_loop.py::ore.read_file import run as read_file\nfrom",
+        "core/agent_loop.py::ore.write_file import run as write_file\nfrom",
+        "core/agent_loop.py::ore.run_terminal import run as run_terminal\nfrom",
+        "core/agent_loop.py::ore.search import run as search_code\nfrom",
+        "core/agent_loop.py::ore.parse_ast import extract_symbols\nfrom",
+        "core/agent_loop.py::ore.knowledge_graph import build_graph\nfrom",
+        "core/agent_loop.py::ore.git_patch import create_patch, apply_patch\n\n\n@da",
+        "core/agent_loop.py::    ",
+        "core/agent_loop.py::    ",
+        "core/agent_loop.py::_init__(self)",
+        "core/agent_loop.py::oop:\n    ",
+        "core/agent_loop.py::__(self,",
+        "core/agent_loop.py::read(self,",
+        "core/agent_loop.py::write(self,",
+        "core/agent_loop.py::search(self,",
+        "core/agent_loop.py::exec(self,",
+        "core/agent_loop.py::analyze(self,",
+        "core/agent_loop.py::ve_path(self,",
+        "core/agent_loop.py::elf,",
+        "core/agent_loop.py::e_plan_from_description(self,",
+        "core/agent_loop.py::tep(self, st",
+        "core/agent_loop.py::elf, st",
+        "core/agent_loop.py::, ta",
+        "core/agent_loop.py::self, de",
+        "core/agent_loop.py::       \"\"\"Restit",
+        "core/agent_loop.py::        \"\"\"Re",
+        "core/agent_loop.py::    "
+      ]
+    },
+    "core/config.py": {
+      "language": "python",
+      "symbol_count": 39,
+      "symbols": [
+        "core/config.py::import json",
+        "core/config.py::import os",
+        "core/config.py::from pathlib import Path",
+        "core/config.py::from typing import Dict, List, Optional, Any",
+        "core/config.py::from datetime import datetime",
+        "core/config.py::Config",
+        "core/config.py::__init__",
+        "core/config.py::_ensure_structure",
+        "core/config.py::_load_config",
+        "core/config.py::_save_config",
+        "core/config.py::get_trusted_folders",
+        "core/config.py::add_trusted_folder",
+        "core/config.py::emove_trusted_folder(",
+        "core/config.py::s_trusted(",
+        "core/config.py::sandbox_mode(sel",
+        "core/config.py::andbox_mode(self",
+        "core/config.py::tive_projects(self)",
+        "core/config.py::tive_project(self,",
+        "core/config.py::active_project(self, ",
+        "core/config.py::rent_project(self, ",
+        "core/config.py::rent_project(self) ",
+        "core/config.py::essions(self, ",
+        "core/config.py::ject_memory_path(self, ",
+        "core/config.py::hashlib",
+        "core/config.py::oject_memory(self, ",
+        "core/config.py::oject_memory(self, ",
+        "core/config.py::f, ",
+        "core/config.py::f, ",
+        "core/config.py::(self) ",
+        "core/config.py::tus():\n   ",
+        "core/config.py::tr):\n    ",
+        "core/config.py::):\n    \"\"\"R",
+        "core/config.py::mposta moda",
+        "core/config.py::me: Optional[st",
+        "core/config.py::bia proget",
+        "core/config.py::stiti da Ganghero",
+        "core/config.py::\"Rimuove progetto ",
+        "core/config.py::ect_memory_pa",
+        "core/config.py::atus()"
+      ]
+    },
+    "core/git_patch.py": {
+      "language": "python",
+      "symbol_count": 7,
+      "symbols": [
+        "core/git_patch.py::import subprocess",
+        "core/git_patch.py::from pathlib import Path",
+        "core/git_patch.py::apply_patch",
+        "core/git_patch.py::create_patch",
+        "core/git_patch.py::import difflib",
+        "core/git_patch.py::revert_patch",
+        "core/git_patch.py::get_diff"
+      ]
+    },
+    "core/indexer.py": {
+      "language": "python",
+      "symbol_count": 39,
+      "symbols": [
+        "core/indexer.py::import json",
+        "core/indexer.py::import time",
+        "core/indexer.py::import threading",
+        "core/indexer.py::from pathlib import Path",
+        "core/indexer.py::from datetime import datetime",
+        "core/indexer.py::from typing import Dict, List, Optional, Callable, Any",
+        "core/indexer.py::from watchdog.observers import Observer",
+        "core/indexer.py::from watchdog.events import FileSystemEventHandler, FileModifiedEvent, FileCreatedEvent, FileDeletedEvent",
+        "core/indexer.py::import notify2",
+        "core/indexer.py::from core.knowledge_graph import build_graph, export_graph",
+        "core/indexer.py::ProjectEventHandler",
+        "core/indexer.py::__init__",
+        "core/indexer.py::on_modified",
+        "core/indexer.py::on_created",
+        "core/indexer.py::on_deleted",
+        "core/indexer.py::_should_process",
+        "core/indexer.py::notify_desktop",
+        "core/indexer.py::mport subprocess",
+        "core/indexer.py::rojectIndexer:",
+        "core/indexer.py::_init__(",
+        "core/indexer.py::log(",
+        "core/indexer.py::handle_event(",
+        "core/indexer.py::rebuild_graph(",
+        "core/indexer.py::send_notification(",
+        "core/indexer.py::detect_changes(",
+        "core/indexer.py::art(s",
+        "core/indexer.py::p(se",
+        "core/indexer.py::running(se",
+        "core/indexer.py::status(sel",
+        "core/indexer.py::leIndexer:\n  ",
+        "core/indexer.py::t__(self",
+        "core/indexer.py::file_hash(self",
+        "core/indexer.py::(self",
+        "core/indexer.py::core.knowledge_graph import get_project_files",
+        "core/indexer.py::self",
+        "core/indexer.py::(self",
+        "core/indexer.py::self",
+        "core/indexer.py::ndexer(proj",
+        "core/indexer.py::t sys"
+      ]
+    },
+    "core/knowledge_graph.py": {
+      "language": "python",
+      "symbol_count": 12,
+      "symbols": [
+        "core/knowledge_graph.py::import json",
+        "core/knowledge_graph.py::from pathlib import Path",
+        "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any",
+        "core/knowledge_graph.py::from datetime import datetime",
+        "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+        "core/knowledge_graph.py::get_project_files",
+        "core/knowledge_graph.py::uild_graph(",
+        "core/knowledge_graph.py::uery_symbol(",
+        "core/knowledge_graph.py::et_file_symbols(",
+        "core/knowledge_graph.py::xport_graph(",
+        "core/knowledge_graph.py::oad_graph(",
+        "core/knowledge_graph.py::mport sys"
+      ]
+    },
+    "core/parse_ast.py": {
+      "language": "python",
+      "symbol_count": 20,
+      "symbols": [
+        "core/parse_ast.py::from pathlib import Path",
+        "core/parse_ast.py::from typing import Dict, List, Optional, Any",
+        "core/parse_ast.py::from tree_sitter import Language, Parser, Tree",
+        "core/parse_ast.py::from tree_sitter_python import language as python_lang",
+        "core/parse_ast.py::from tree_sitter_javascript import language as js_lang",
+        "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx",
+        "core/parse_ast.py::from tree_sitter_rust import language as rust_lang",
+        "core/parse_ast.py::_get_parser",
+        "core/parse_ast.py::run",
+        "core/parse_ast.py::_get_node_text",
+        "core/parse_ast.py::_extract_python_symbols",
+        "core/parse_ast.py::traverse",
+        "core/parse_ast.py::_extract_js_ts_symbols",
+        "core/parse_ast.py::traverse",
+        "core/parse_ast.py::_extract_rust_symbols",
+        "core/parse_ast.py::traverse",
+        "core/parse_ast.py::extract_symbols",
+        "core/parse_ast.py::get_file_structure",
+        "core/parse_ast.py::simplify_tree",
+        "core/parse_ast.py::mport json"
+      ]
+    },
+    "core/read_file.py": {
+      "language": "python",
+      "symbol_count": 3,
+      "symbols": [
+        "core/read_file.py::from pathlib import Path",
+        "core/read_file.py::run",
+        "core/read_file.py::run_safe"
+      ]
+    },
+    "core/run_terminal.py": {
+      "language": "python",
+      "symbol_count": 4,
+      "symbols": [
+        "core/run_terminal.py::import subprocess",
+        "core/run_terminal.py::run",
+        "core/run_terminal.py::run_safe",
+        "core/run_terminal.py::run_async"
+      ]
+    },
+    "core/search.py": {
+      "language": "python",
+      "symbol_count": 5,
+      "symbols": [
+        "core/search.py::import subprocess",
+        "core/search.py::from pathlib import Path",
+        "core/search.py::run",
+        "core/search.py::un_safe(",
+        "core/search.py::arch_files(e"
+      ]
+    },
+    "core/write_file.py": {
+      "language": "python",
+      "symbol_count": 3,
+      "symbols": [
+        "core/write_file.py::from pathlib import Path",
+        "core/write_file.py::run",
+        "core/write_file.py::run_safe"
+      ]
+    }
+  },
+  "symbols": {
+    "core/agent_loop.py::json\nimpor": {
+      "id": "core/agent_loop.py::json\nimpor",
+      "name": "json\nimpor",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/agent_loop.py::sys\nimpor": {
+      "id": "core/agent_loop.py::sys\nimpor",
+      "name": "sys\nimpor",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/agent_loop.py::time\nfrom": {
+      "id": "core/agent_loop.py::time\nfrom",
+      "name": "time\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/agent_loop.py::athlib import Path\nfrom": {
+      "id": "core/agent_loop.py::athlib import Path\nfrom",
+      "name": "athlib import Path\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/agent_loop.py::yping import Dict, List, Optional, Callable, Any, Tuple\nfrom": {
+      "id": "core/agent_loop.py::yping import Dict, List, Optional, Callable, Any, Tuple\nfrom",
+      "name": "yping import Dict, List, Optional, Callable, Any, Tuple\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 15,
+      "column": 0
+    },
+    "core/agent_loop.py::atetime import datetime\nfrom": {
+      "id": "core/agent_loop.py::atetime import datetime\nfrom",
+      "name": "atetime import datetime\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 16,
+      "column": 0
+    },
+    "core/agent_loop.py::ataclasses import dataclass, asdict\n\nsys.": {
+      "id": "core/agent_loop.py::ataclasses import dataclass, asdict\n\nsys.",
+      "name": "ataclasses import dataclass, asdict\n\nsys.",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 17,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.config import Config\nfrom": {
+      "id": "core/agent_loop.py::ore.config import Config\nfrom",
+      "name": "ore.config import Config\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 21,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.read_file import run as read_file\nfrom": {
+      "id": "core/agent_loop.py::ore.read_file import run as read_file\nfrom",
+      "name": "ore.read_file import run as read_file\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 22,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.write_file import run as write_file\nfrom": {
+      "id": "core/agent_loop.py::ore.write_file import run as write_file\nfrom",
+      "name": "ore.write_file import run as write_file\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 23,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.run_terminal import run as run_terminal\nfrom": {
+      "id": "core/agent_loop.py::ore.run_terminal import run as run_terminal\nfrom",
+      "name": "ore.run_terminal import run as run_terminal\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 24,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.search import run as search_code\nfrom": {
+      "id": "core/agent_loop.py::ore.search import run as search_code\nfrom",
+      "name": "ore.search import run as search_code\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 25,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.parse_ast import extract_symbols\nfrom": {
+      "id": "core/agent_loop.py::ore.parse_ast import extract_symbols\nfrom",
+      "name": "ore.parse_ast import extract_symbols\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 26,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.knowledge_graph import build_graph\nfrom": {
+      "id": "core/agent_loop.py::ore.knowledge_graph import build_graph\nfrom",
+      "name": "ore.knowledge_graph import build_graph\nfrom",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 27,
+      "column": 0
+    },
+    "core/agent_loop.py::ore.git_patch import create_patch, apply_patch\n\n\n@da": {
+      "id": "core/agent_loop.py::ore.git_patch import create_patch, apply_patch\n\n\n@da",
+      "name": "ore.git_patch import create_patch, apply_patch\n\n\n@da",
+      "type": "import",
+      "file": "core/agent_loop.py",
+      "line": 28,
+      "column": 0
+    },
+    "core/agent_loop.py::    ": {
+      "id": "core/agent_loop.py::    ",
+      "name": "    ",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 376,
+      "column": 0
+    },
+    "core/agent_loop.py::_init__(self)": {
+      "id": "core/agent_loop.py::_init__(self)",
+      "name": "_init__(self)",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 56,
+      "column": 4
+    },
+    "core/agent_loop.py::oop:\n    ": {
+      "id": "core/agent_loop.py::oop:\n    ",
+      "name": "oop:\n    ",
+      "type": "class",
+      "file": "core/agent_loop.py",
+      "line": 61,
+      "column": 0
+    },
+    "core/agent_loop.py::__(self,": {
+      "id": "core/agent_loop.py::__(self,",
+      "name": "__(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 72,
+      "column": 4
+    },
+    "core/agent_loop.py::read(self,": {
+      "id": "core/agent_loop.py::read(self,",
+      "name": "read(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 102,
+      "column": 4
+    },
+    "core/agent_loop.py::write(self,": {
+      "id": "core/agent_loop.py::write(self,",
+      "name": "write(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 111,
+      "column": 4
+    },
+    "core/agent_loop.py::search(self,": {
+      "id": "core/agent_loop.py::search(self,",
+      "name": "search(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 120,
+      "column": 4
+    },
+    "core/agent_loop.py::exec(self,": {
+      "id": "core/agent_loop.py::exec(self,",
+      "name": "exec(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 128,
+      "column": 4
+    },
+    "core/agent_loop.py::analyze(self,": {
+      "id": "core/agent_loop.py::analyze(self,",
+      "name": "analyze(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 136,
+      "column": 4
+    },
+    "core/agent_loop.py::ve_path(self,": {
+      "id": "core/agent_loop.py::ve_path(self,",
+      "name": "ve_path(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 145,
+      "column": 4
+    },
+    "core/agent_loop.py::elf,": {
+      "id": "core/agent_loop.py::elf,",
+      "name": "elf,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 154,
+      "column": 4
+    },
+    "core/agent_loop.py::e_plan_from_description(self,": {
+      "id": "core/agent_loop.py::e_plan_from_description(self,",
+      "name": "e_plan_from_description(self,",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 178,
+      "column": 4
+    },
+    "core/agent_loop.py::tep(self, st": {
+      "id": "core/agent_loop.py::tep(self, st",
+      "name": "tep(self, st",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 234,
+      "column": 4
+    },
+    "core/agent_loop.py::elf, st": {
+      "id": "core/agent_loop.py::elf, st",
+      "name": "elf, st",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 263,
+      "column": 4
+    },
+    "core/agent_loop.py::, ta": {
+      "id": "core/agent_loop.py::, ta",
+      "name": ", ta",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 275,
+      "column": 4
+    },
+    "core/agent_loop.py::self, de": {
+      "id": "core/agent_loop.py::self, de",
+      "name": "self, de",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 291,
+      "column": 4
+    },
+    "core/agent_loop.py::       \"\"\"Restit": {
+      "id": "core/agent_loop.py::       \"\"\"Restit",
+      "name": "       \"\"\"Restit",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 361,
+      "column": 4
+    },
+    "core/agent_loop.py::        \"\"\"Re": {
+      "id": "core/agent_loop.py::        \"\"\"Re",
+      "name": "        \"\"\"Re",
+      "type": "function",
+      "file": "core/agent_loop.py",
+      "line": 368,
+      "column": 4
+    },
+    "core/config.py::import json": {
+      "id": "core/config.py::import json",
+      "name": "import json",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/config.py::import os": {
+      "id": "core/config.py::import os",
+      "name": "import os",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/config.py::from pathlib import Path": {
+      "id": "core/config.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/config.py::from typing import Dict, List, Optional, Any": {
+      "id": "core/config.py::from typing import Dict, List, Optional, Any",
+      "name": "from typing import Dict, List, Optional, Any",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 15,
+      "column": 0
+    },
+    "core/config.py::from datetime import datetime": {
+      "id": "core/config.py::from datetime import datetime",
+      "name": "from datetime import datetime",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 16,
+      "column": 0
+    },
+    "core/config.py::Config": {
+      "id": "core/config.py::Config",
+      "name": "Config",
+      "type": "class",
+      "file": "core/config.py",
+      "line": 19,
+      "column": 0
+    },
+    "core/config.py::__init__": {
+      "id": "core/config.py::__init__",
+      "name": "__init__",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 25,
+      "column": 4
+    },
+    "core/config.py::_ensure_structure": {
+      "id": "core/config.py::_ensure_structure",
+      "name": "_ensure_structure",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 37,
+      "column": 4
+    },
+    "core/config.py::_load_config": {
+      "id": "core/config.py::_load_config",
+      "name": "_load_config",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 43,
+      "column": 4
+    },
+    "core/config.py::_save_config": {
+      "id": "core/config.py::_save_config",
+      "name": "_save_config",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 63,
+      "column": 4
+    },
+    "core/config.py::get_trusted_folders": {
+      "id": "core/config.py::get_trusted_folders",
+      "name": "get_trusted_folders",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 70,
+      "column": 4
+    },
+    "core/config.py::add_trusted_folder": {
+      "id": "core/config.py::add_trusted_folder",
+      "name": "add_trusted_folder",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 74,
+      "column": 4
+    },
+    "core/config.py::emove_trusted_folder(": {
+      "id": "core/config.py::emove_trusted_folder(",
+      "name": "emove_trusted_folder(",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 100,
+      "column": 4
+    },
+    "core/config.py::s_trusted(": {
+      "id": "core/config.py::s_trusted(",
+      "name": "s_trusted(",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 114,
+      "column": 4
+    },
+    "core/config.py::sandbox_mode(sel": {
+      "id": "core/config.py::sandbox_mode(sel",
+      "name": "sandbox_mode(sel",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 139,
+      "column": 4
+    },
+    "core/config.py::andbox_mode(self": {
+      "id": "core/config.py::andbox_mode(self",
+      "name": "andbox_mode(self",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 143,
+      "column": 4
+    },
+    "core/config.py::tive_projects(self)": {
+      "id": "core/config.py::tive_projects(self)",
+      "name": "tive_projects(self)",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 159,
+      "column": 4
+    },
+    "core/config.py::tive_project(self,": {
+      "id": "core/config.py::tive_project(self,",
+      "name": "tive_project(self,",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 169,
+      "column": 4
+    },
+    "core/config.py::active_project(self, ": {
+      "id": "core/config.py::active_project(self, ",
+      "name": "active_project(self, ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 202,
+      "column": 4
+    },
+    "core/config.py::rent_project(self, ": {
+      "id": "core/config.py::rent_project(self, ",
+      "name": "rent_project(self, ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 214,
+      "column": 4
+    },
+    "core/config.py::rent_project(self) ": {
+      "id": "core/config.py::rent_project(self) ",
+      "name": "rent_project(self) ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 226,
+      "column": 4
+    },
+    "core/config.py::essions(self, ": {
+      "id": "core/config.py::essions(self, ",
+      "name": "essions(self, ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 240,
+      "column": 4
+    },
+    "core/config.py::ject_memory_path(self, ": {
+      "id": "core/config.py::ject_memory_path(self, ",
+      "name": "ject_memory_path(self, ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 259,
+      "column": 4
+    },
+    "core/config.py::hashlib": {
+      "id": "core/config.py::hashlib",
+      "name": "hashlib",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 264,
+      "column": 8
+    },
+    "core/config.py::oject_memory(self, ": {
+      "id": "core/config.py::oject_memory(self, ",
+      "name": "oject_memory(self, ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 283,
+      "column": 4
+    },
+    "core/config.py::f, ": {
+      "id": "core/config.py::f, ",
+      "name": "f, ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 302,
+      "column": 4
+    },
+    "core/config.py::(self) ": {
+      "id": "core/config.py::(self) ",
+      "name": "(self) ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 308,
+      "column": 4
+    },
+    "core/config.py::tus():\n   ": {
+      "id": "core/config.py::tus():\n   ",
+      "name": "tus():\n   ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 315,
+      "column": 0
+    },
+    "core/config.py::tr):\n    ": {
+      "id": "core/config.py::tr):\n    ",
+      "name": "tr):\n    ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 346,
+      "column": 0
+    },
+    "core/config.py::):\n    \"\"\"R": {
+      "id": "core/config.py::):\n    \"\"\"R",
+      "name": "):\n    \"\"\"R",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 356,
+      "column": 0
+    },
+    "core/config.py::mposta moda": {
+      "id": "core/config.py::mposta moda",
+      "name": "mposta moda",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 366,
+      "column": 0
+    },
+    "core/config.py::me: Optional[st": {
+      "id": "core/config.py::me: Optional[st",
+      "name": "me: Optional[st",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 376,
+      "column": 0
+    },
+    "core/config.py::bia proget": {
+      "id": "core/config.py::bia proget",
+      "name": "bia proget",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 386,
+      "column": 0
+    },
+    "core/config.py::stiti da Ganghero": {
+      "id": "core/config.py::stiti da Ganghero",
+      "name": "stiti da Ganghero",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 396,
+      "column": 0
+    },
+    "core/config.py::\"Rimuove progetto ": {
+      "id": "core/config.py::\"Rimuove progetto ",
+      "name": "\"Rimuove progetto ",
+      "type": "function",
+      "file": "core/config.py",
+      "line": 410,
+      "column": 0
+    },
+    "core/config.py::ect_memory_pa": {
+      "id": "core/config.py::ect_memory_pa",
+      "name": "ect_memory_pa",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 426,
+      "column": 4
+    },
+    "core/config.py::atus()": {
+      "id": "core/config.py::atus()",
+      "name": "atus()",
+      "type": "import",
+      "file": "core/config.py",
+      "line": 440,
+      "column": 4
+    },
+    "core/git_patch.py::import subprocess": {
+      "id": "core/git_patch.py::import subprocess",
+      "name": "import subprocess",
+      "type": "import",
+      "file": "core/git_patch.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/git_patch.py::from pathlib import Path": {
+      "id": "core/git_patch.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/git_patch.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/git_patch.py::apply_patch": {
+      "id": "core/git_patch.py::apply_patch",
+      "name": "apply_patch",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/git_patch.py::create_patch": {
+      "id": "core/git_patch.py::create_patch",
+      "name": "create_patch",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 41,
+      "column": 0
+    },
+    "core/git_patch.py::import difflib": {
+      "id": "core/git_patch.py::import difflib",
+      "name": "import difflib",
+      "type": "import",
+      "file": "core/git_patch.py",
+      "line": 53,
+      "column": 4
+    },
+    "core/git_patch.py::revert_patch": {
+      "id": "core/git_patch.py::revert_patch",
+      "name": "revert_patch",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 69,
+      "column": 0
+    },
+    "core/git_patch.py::get_diff": {
+      "id": "core/git_patch.py::get_diff",
+      "name": "get_diff",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 96,
+      "column": 0
+    },
+    "core/indexer.py::import json": {
+      "id": "core/indexer.py::import json",
+      "name": "import json",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/indexer.py::import time": {
+      "id": "core/indexer.py::import time",
+      "name": "import time",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/indexer.py::import threading": {
+      "id": "core/indexer.py::import threading",
+      "name": "import threading",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/indexer.py::from pathlib import Path": {
+      "id": "core/indexer.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 15,
+      "column": 0
+    },
+    "core/indexer.py::from datetime import datetime": {
+      "id": "core/indexer.py::from datetime import datetime",
+      "name": "from datetime import datetime",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 16,
+      "column": 0
+    },
+    "core/indexer.py::from typing import Dict, List, Optional, Callable, Any": {
+      "id": "core/indexer.py::from typing import Dict, List, Optional, Callable, Any",
+      "name": "from typing import Dict, List, Optional, Callable, Any",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 17,
+      "column": 0
+    },
+    "core/indexer.py::from watchdog.observers import Observer": {
+      "id": "core/indexer.py::from watchdog.observers import Observer",
+      "name": "from watchdog.observers import Observer",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 20,
+      "column": 4
+    },
+    "core/indexer.py::from watchdog.events import FileSystemEventHandler, FileModifiedEvent, FileCreatedEvent, FileDeletedEvent": {
+      "id": "core/indexer.py::from watchdog.events import FileSystemEventHandler, FileModifiedEvent, FileCreatedEvent, FileDeletedEvent",
+      "name": "from watchdog.events import FileSystemEventHandler, FileModifiedEvent, FileCreatedEvent, FileDeletedEvent",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 21,
+      "column": 4
+    },
+    "core/indexer.py::import notify2": {
+      "id": "core/indexer.py::import notify2",
+      "name": "import notify2",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 28,
+      "column": 4
+    },
+    "core/indexer.py::from core.knowledge_graph import build_graph, export_graph": {
+      "id": "core/indexer.py::from core.knowledge_graph import build_graph, export_graph",
+      "name": "from core.knowledge_graph import build_graph, export_graph",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 33,
+      "column": 0
+    },
+    "core/indexer.py::ProjectEventHandler": {
+      "id": "core/indexer.py::ProjectEventHandler",
+      "name": "ProjectEventHandler",
+      "type": "class",
+      "file": "core/indexer.py",
+      "line": 36,
+      "column": 0
+    },
+    "core/indexer.py::__init__": {
+      "id": "core/indexer.py::__init__",
+      "name": "__init__",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 39,
+      "column": 4
+    },
+    "core/indexer.py::on_modified": {
+      "id": "core/indexer.py::on_modified",
+      "name": "on_modified",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 48,
+      "column": 4
+    },
+    "core/indexer.py::on_created": {
+      "id": "core/indexer.py::on_created",
+      "name": "on_created",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 54,
+      "column": 4
+    },
+    "core/indexer.py::on_deleted": {
+      "id": "core/indexer.py::on_deleted",
+      "name": "on_deleted",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 59,
+      "column": 4
+    },
+    "core/indexer.py::_should_process": {
+      "id": "core/indexer.py::_should_process",
+      "name": "_should_process",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 64,
+      "column": 4
+    },
+    "core/indexer.py::notify_desktop": {
+      "id": "core/indexer.py::notify_desktop",
+      "name": "notify_desktop",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 74,
+      "column": 0
+    },
+    "core/indexer.py::mport subprocess": {
+      "id": "core/indexer.py::mport subprocess",
+      "name": "mport subprocess",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 101,
+      "column": 8
+    },
+    "core/indexer.py::rojectIndexer:": {
+      "id": "core/indexer.py::rojectIndexer:",
+      "name": "rojectIndexer:",
+      "type": "class",
+      "file": "core/indexer.py",
+      "line": 112,
+      "column": 0
+    },
+    "core/indexer.py::_init__(": {
+      "id": "core/indexer.py::_init__(",
+      "name": "_init__(",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 118,
+      "column": 4
+    },
+    "core/indexer.py::log(": {
+      "id": "core/indexer.py::log(",
+      "name": "log(",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 151,
+      "column": 4
+    },
+    "core/indexer.py::handle_event(": {
+      "id": "core/indexer.py::handle_event(",
+      "name": "handle_event(",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 159,
+      "column": 4
+    },
+    "core/indexer.py::rebuild_graph(": {
+      "id": "core/indexer.py::rebuild_graph(",
+      "name": "rebuild_graph(",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 166,
+      "column": 4
+    },
+    "core/indexer.py::send_notification(": {
+      "id": "core/indexer.py::send_notification(",
+      "name": "send_notification(",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 196,
+      "column": 4
+    },
+    "core/indexer.py::detect_changes(": {
+      "id": "core/indexer.py::detect_changes(",
+      "name": "detect_changes(",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 236,
+      "column": 4
+    },
+    "core/indexer.py::art(s": {
+      "id": "core/indexer.py::art(s",
+      "name": "art(s",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 263,
+      "column": 4
+    },
+    "core/indexer.py::p(se": {
+      "id": "core/indexer.py::p(se",
+      "name": "p(se",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 293,
+      "column": 4
+    },
+    "core/indexer.py::running(se": {
+      "id": "core/indexer.py::running(se",
+      "name": "running(se",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 307,
+      "column": 4
+    },
+    "core/indexer.py::status(sel": {
+      "id": "core/indexer.py::status(sel",
+      "name": "status(sel",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 311,
+      "column": 4
+    },
+    "core/indexer.py::leIndexer:\n  ": {
+      "id": "core/indexer.py::leIndexer:\n  ",
+      "name": "leIndexer:\n  ",
+      "type": "class",
+      "file": "core/indexer.py",
+      "line": 322,
+      "column": 0
+    },
+    "core/indexer.py::t__(self": {
+      "id": "core/indexer.py::t__(self",
+      "name": "t__(self",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 328,
+      "column": 4
+    },
+    "core/indexer.py::file_hash(self": {
+      "id": "core/indexer.py::file_hash(self",
+      "name": "file_hash(self",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 352,
+      "column": 4
+    },
+    "core/indexer.py::(self": {
+      "id": "core/indexer.py::(self",
+      "name": "(self",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 401,
+      "column": 4
+    },
+    "core/indexer.py::core.knowledge_graph import get_project_files": {
+      "id": "core/indexer.py::core.knowledge_graph import get_project_files",
+      "name": "core.knowledge_graph import get_project_files",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 362,
+      "column": 8
+    },
+    "core/indexer.py::self": {
+      "id": "core/indexer.py::self",
+      "name": "self",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 412,
+      "column": 4
+    },
+    "core/indexer.py::ndexer(proj": {
+      "id": "core/indexer.py::ndexer(proj",
+      "name": "ndexer(proj",
+      "type": "function",
+      "file": "core/indexer.py",
+      "line": 420,
+      "column": 0
+    },
+    "core/indexer.py::t sys": {
+      "id": "core/indexer.py::t sys",
+      "name": "t sys",
+      "type": "import",
+      "file": "core/indexer.py",
+      "line": 460,
+      "column": 4
+    },
+    "core/knowledge_graph.py::import json": {
+      "id": "core/knowledge_graph.py::import json",
+      "name": "import json",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from pathlib import Path": {
+      "id": "core/knowledge_graph.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any": {
+      "id": "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any",
+      "name": "from typing import Dict, List, Optional, Set, Any",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from datetime import datetime": {
+      "id": "core/knowledge_graph.py::from datetime import datetime",
+      "name": "from datetime import datetime",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP": {
+      "id": "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+      "name": "from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 17,
+      "column": 4
+    },
+    "core/knowledge_graph.py::get_project_files": {
+      "id": "core/knowledge_graph.py::get_project_files",
+      "name": "get_project_files",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 23,
+      "column": 0
+    },
+    "core/knowledge_graph.py::uild_graph(": {
+      "id": "core/knowledge_graph.py::uild_graph(",
+      "name": "uild_graph(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 84,
+      "column": 0
+    },
+    "core/knowledge_graph.py::uery_symbol(": {
+      "id": "core/knowledge_graph.py::uery_symbol(",
+      "name": "uery_symbol(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 178,
+      "column": 0
+    },
+    "core/knowledge_graph.py::et_file_symbols(": {
+      "id": "core/knowledge_graph.py::et_file_symbols(",
+      "name": "et_file_symbols(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 196,
+      "column": 0
+    },
+    "core/knowledge_graph.py::xport_graph(": {
+      "id": "core/knowledge_graph.py::xport_graph(",
+      "name": "xport_graph(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 217,
+      "column": 0
+    },
+    "core/knowledge_graph.py::oad_graph(": {
+      "id": "core/knowledge_graph.py::oad_graph(",
+      "name": "oad_graph(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 236,
+      "column": 0
+    },
+    "core/knowledge_graph.py::mport sys": {
+      "id": "core/knowledge_graph.py::mport sys",
+      "name": "mport sys",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 256,
+      "column": 4
+    },
+    "core/parse_ast.py::from pathlib import Path": {
+      "id": "core/parse_ast.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/parse_ast.py::from typing import Dict, List, Optional, Any": {
+      "id": "core/parse_ast.py::from typing import Dict, List, Optional, Any",
+      "name": "from typing import Dict, List, Optional, Any",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/parse_ast.py::from tree_sitter import Language, Parser, Tree": {
+      "id": "core/parse_ast.py::from tree_sitter import Language, Parser, Tree",
+      "name": "from tree_sitter import Language, Parser, Tree",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 15,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_python import language as python_lang": {
+      "id": "core/parse_ast.py::from tree_sitter_python import language as python_lang",
+      "name": "from tree_sitter_python import language as python_lang",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 16,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_javascript import language as js_lang": {
+      "id": "core/parse_ast.py::from tree_sitter_javascript import language as js_lang",
+      "name": "from tree_sitter_javascript import language as js_lang",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 17,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx": {
+      "id": "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx",
+      "name": "from tree_sitter_typescript import language_typescript, language_tsx",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 18,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_rust import language as rust_lang": {
+      "id": "core/parse_ast.py::from tree_sitter_rust import language as rust_lang",
+      "name": "from tree_sitter_rust import language as rust_lang",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 19,
+      "column": 4
+    },
+    "core/parse_ast.py::_get_parser": {
+      "id": "core/parse_ast.py::_get_parser",
+      "name": "_get_parser",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 40,
+      "column": 0
+    },
+    "core/parse_ast.py::run": {
+      "id": "core/parse_ast.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 66,
+      "column": 0
+    },
+    "core/parse_ast.py::_get_node_text": {
+      "id": "core/parse_ast.py::_get_node_text",
+      "name": "_get_node_text",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 111,
+      "column": 0
+    },
+    "core/parse_ast.py::_extract_python_symbols": {
+      "id": "core/parse_ast.py::_extract_python_symbols",
+      "name": "_extract_python_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 116,
+      "column": 0
+    },
+    "core/parse_ast.py::traverse": {
+      "id": "core/parse_ast.py::traverse",
+      "name": "traverse",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 224,
+      "column": 4
+    },
+    "core/parse_ast.py::_extract_js_ts_symbols": {
+      "id": "core/parse_ast.py::_extract_js_ts_symbols",
+      "name": "_extract_js_ts_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 168,
+      "column": 0
+    },
+    "core/parse_ast.py::_extract_rust_symbols": {
+      "id": "core/parse_ast.py::_extract_rust_symbols",
+      "name": "_extract_rust_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 220,
+      "column": 0
+    },
+    "core/parse_ast.py::extract_symbols": {
+      "id": "core/parse_ast.py::extract_symbols",
+      "name": "extract_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 272,
+      "column": 0
+    },
+    "core/parse_ast.py::get_file_structure": {
+      "id": "core/parse_ast.py::get_file_structure",
+      "name": "get_file_structure",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 311,
+      "column": 0
+    },
+    "core/parse_ast.py::simplify_tree": {
+      "id": "core/parse_ast.py::simplify_tree",
+      "name": "simplify_tree",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 326,
+      "column": 4
+    },
+    "core/parse_ast.py::mport json": {
+      "id": "core/parse_ast.py::mport json",
+      "name": "mport json",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 347,
+      "column": 4
+    },
+    "core/read_file.py::from pathlib import Path": {
+      "id": "core/read_file.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/read_file.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/read_file.py::run": {
+      "id": "core/read_file.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/read_file.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/read_file.py::run_safe": {
+      "id": "core/read_file.py::run_safe",
+      "name": "run_safe",
+      "type": "function",
+      "file": "core/read_file.py",
+      "line": 30,
+      "column": 0
+    },
+    "core/run_terminal.py::import subprocess": {
+      "id": "core/run_terminal.py::import subprocess",
+      "name": "import subprocess",
+      "type": "import",
+      "file": "core/run_terminal.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/run_terminal.py::run": {
+      "id": "core/run_terminal.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/run_terminal.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/run_terminal.py::run_safe": {
+      "id": "core/run_terminal.py::run_safe",
+      "name": "run_safe",
+      "type": "function",
+      "file": "core/run_terminal.py",
+      "line": 37,
+      "column": 0
+    },
+    "core/run_terminal.py::run_async": {
+      "id": "core/run_terminal.py::run_async",
+      "name": "run_async",
+      "type": "function",
+      "file": "core/run_terminal.py",
+      "line": 67,
+      "column": 0
+    },
+    "core/search.py::import subprocess": {
+      "id": "core/search.py::import subprocess",
+      "name": "import subprocess",
+      "type": "import",
+      "file": "core/search.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/search.py::from pathlib import Path": {
+      "id": "core/search.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/search.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/search.py::run": {
+      "id": "core/search.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/search.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/search.py::un_safe(": {
+      "id": "core/search.py::un_safe(",
+      "name": "un_safe(",
+      "type": "function",
+      "file": "core/search.py",
+      "line": 36,
+      "column": 0
+    },
+    "core/search.py::arch_files(e": {
+      "id": "core/search.py::arch_files(e",
+      "name": "arch_files(e",
+      "type": "function",
+      "file": "core/search.py",
+      "line": 64,
+      "column": 0
+    },
+    "core/write_file.py::from pathlib import Path": {
+      "id": "core/write_file.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/write_file.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/write_file.py::run": {
+      "id": "core/write_file.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/write_file.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/write_file.py::run_safe": {
+      "id": "core/write_file.py::run_safe",
+      "name": "run_safe",
+      "type": "function",
+      "file": "core/write_file.py",
+      "line": 34,
+      "column": 0
+    }
+  },
+  "relations": [
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::json\nimpor",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::sys\nimpor",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::time\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::athlib import Path\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::yping import Dict, List, Optional, Callable, Any, Tuple\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::atetime import datetime\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ataclasses import dataclass, asdict\n\nsys.",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.config import Config\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.read_file import run as read_file\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.write_file import run as write_file\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.run_terminal import run as run_terminal\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.search import run as search_code\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.parse_ast import extract_symbols\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.knowledge_graph import build_graph\nfrom",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ore.git_patch import create_patch, apply_patch\n\n\n@da",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::    ",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::    ",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::_init__(self)",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::oop:\n    ",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::__(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::read(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::write(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::search(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::exec(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::analyze(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::ve_path(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::elf,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::e_plan_from_description(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::tep(self, st",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::elf, st",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::, ta",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::self, de",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::       \"\"\"Restit",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::        \"\"\"Re",
+      "type": "contains"
+    },
+    {
+      "from": "core/agent_loop.py",
+      "to": "core/agent_loop.py::    ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::import json",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::import os",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::from typing import Dict, List, Optional, Any",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::from datetime import datetime",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::Config",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::__init__",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::_ensure_structure",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::_load_config",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::_save_config",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::get_trusted_folders",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::add_trusted_folder",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::emove_trusted_folder(",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::s_trusted(",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::sandbox_mode(sel",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::andbox_mode(self",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::tive_projects(self)",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::tive_project(self,",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::active_project(self, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::rent_project(self, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::rent_project(self) ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::essions(self, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::ject_memory_path(self, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::hashlib",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::oject_memory(self, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::oject_memory(self, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::f, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::f, ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::(self) ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::tus():\n   ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::tr):\n    ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::):\n    \"\"\"R",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::mposta moda",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::me: Optional[st",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::bia proget",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::stiti da Ganghero",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::\"Rimuove progetto ",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::ect_memory_pa",
+      "type": "contains"
+    },
+    {
+      "from": "core/config.py",
+      "to": "core/config.py::atus()",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::import subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::apply_patch",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::create_patch",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::import difflib",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::revert_patch",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::get_diff",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::import json",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::import time",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::import threading",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::from datetime import datetime",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::from typing import Dict, List, Optional, Callable, Any",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::from watchdog.observers import Observer",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::from watchdog.events import FileSystemEventHandler, FileModifiedEvent, FileCreatedEvent, FileDeletedEvent",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::import notify2",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::from core.knowledge_graph import build_graph, export_graph",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::ProjectEventHandler",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::__init__",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::on_modified",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::on_created",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::on_deleted",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::_should_process",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::notify_desktop",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::mport subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::rojectIndexer:",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::_init__(",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::log(",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::handle_event(",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::rebuild_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::send_notification(",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::detect_changes(",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::art(s",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::p(se",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::running(se",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::status(sel",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::leIndexer:\n  ",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::t__(self",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::file_hash(self",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::(self",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::core.knowledge_graph import get_project_files",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::self",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::(self",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::self",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::ndexer(proj",
+      "type": "contains"
+    },
+    {
+      "from": "core/indexer.py",
+      "to": "core/indexer.py::t sys",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::import json",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from datetime import datetime",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::get_project_files",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::uild_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::uery_symbol(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::et_file_symbols(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::xport_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::oad_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::mport sys",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from typing import Dict, List, Optional, Any",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter import Language, Parser, Tree",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_python import language as python_lang",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_javascript import language as js_lang",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_rust import language as rust_lang",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_get_parser",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_get_node_text",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_extract_python_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::traverse",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_extract_js_ts_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::traverse",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_extract_rust_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::traverse",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::extract_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::get_file_structure",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::simplify_tree",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::mport json",
+      "type": "contains"
+    },
+    {
+      "from": "core/read_file.py",
+      "to": "core/read_file.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/read_file.py",
+      "to": "core/read_file.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/read_file.py",
+      "to": "core/read_file.py::run_safe",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::import subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::run_safe",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::run_async",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::import subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::un_safe(",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::arch_files(e",
+      "type": "contains"
+    },
+    {
+      "from": "core/write_file.py",
+      "to": "core/write_file.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/write_file.py",
+      "to": "core/write_file.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/write_file.py",
+      "to": "core/write_file.py::run_safe",
+      "type": "contains"
+    }
+  ]
+}

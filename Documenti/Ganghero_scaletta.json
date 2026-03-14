@@ -77,6 +77,16 @@
       ]
     },
     {
+      "id": "1773487830110",
+      "title": "Features da aggiungere",
+      "cards": [
+        {
+          "id": "1773487839947",
+          "text": "Maggiore integrazione con vs code"
+        }
+      ]
+    },
+    {
       "id": "1773421562229",
       "title": "Completato FASE2 - Bridge VS Code",
       "cards": [
@@ -116,11 +126,11 @@
         },
         {
           "id": "card-303",
-          "text": "✅ Indicizzazione automatica progetto"
+          "text": "Indicizzazione automatica progetto"
         },
         {
           "id": "card-304",
-          "text": "✅ Loop operativo agente (plan → execute → observe → save)"
+          "text": "Loop operativo agente (plan → execute → observe → save)"
         }
       ]
     },
@@ -130,38 +140,14 @@
       "cards": [
         {
           "id": "card-401",
-          "text": "✅ Memoria globale (~/.config/ganghero/)"
-        },
-        {
-          "id": "card-402",
-          "text": "✅ CLI commands (ganghero status/trust/switch/list/rm)"
-        },
-        {
-          "id": "card-403",
-          "text": "Whitelist e sandbox mode"
-        },
-        {
-          "id": "card-404",
-          "text": "Cross-platform support (Windows/Mac)"
-        },
-        {
-          "id": "card-405",
-          "text": "Installazione interattiva"
-        },
-        {
-          "id": "card-406",
-          "text": "Apertura file VS Code con sicurezza"
-        },
-        {
-          "id": "card-407",
           "text": "Adattatore OpenClaw (default)"
         },
         {
-          "id": "card-408",
+          "id": "card-402",
           "text": "Adattatore Ollama"
         },
         {
-          "id": "card-409",
+          "id": "card-403",
           "text": "Adattatore LM Studio"
         }
       ]
@@ -296,7 +282,12 @@
       "created": 1773420972180,
       "modified": 1773420972180,
       "note": ""
+    },
+    "1773487839947": {
+      "created": 1773487839947,
+      "modified": 1773487938617,
+      "note": "Attualmente l'integrazione fra ganghero e vs code sembra inesistente malgrado l'isntallazione di un'estensione. \nL'utente dovrebbe vedere in vs code\n1) l'agente che apre e modifica il file\n2) l'agente che scorre fino alla riga da inserire e modificare\n3) il codice evidenziato in rosso o in verde per le modifiche\n4) eventuali confronti fra versione modificata e versione precedente alla modifica del file"
     }
   },
-  "exportedAt": "2026-03-14T08:27:59.194Z"
+  "exportedAt": "2026-03-14T11:33:03.912Z"
 }
