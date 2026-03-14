@@ -1,0 +1,805 @@
+{
+  "metadata": {
+    "project_path": "/home/carlo/progetti/Ganghero",
+    "created": "2026-03-14T09:24:17.199539",
+    "languages": [
+      "python"
+    ],
+    "stats": {
+      "total_files": 7,
+      "total_symbols": 52,
+      "total_relations": 54,
+      "files_by_language": {
+        "python": 7
+      }
+    }
+  },
+  "files": {
+    "core/git_patch.py": {
+      "language": "python",
+      "symbol_count": 7,
+      "symbols": [
+        "core/git_patch.py::import subprocess",
+        "core/git_patch.py::from pathlib import Path",
+        "core/git_patch.py::apply_patch",
+        "core/git_patch.py::create_patch",
+        "core/git_patch.py::import difflib",
+        "core/git_patch.py::revert_patch",
+        "core/git_patch.py::get_diff"
+      ]
+    },
+    "core/knowledge_graph.py": {
+      "language": "python",
+      "symbol_count": 12,
+      "symbols": [
+        "core/knowledge_graph.py::import json",
+        "core/knowledge_graph.py::from pathlib import Path",
+        "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any",
+        "core/knowledge_graph.py::from datetime import datetime",
+        "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+        "core/knowledge_graph.py::get_project_files",
+        "core/knowledge_graph.py::uild_graph(",
+        "core/knowledge_graph.py::uery_symbol(",
+        "core/knowledge_graph.py::et_file_symbols(",
+        "core/knowledge_graph.py::xport_graph(",
+        "core/knowledge_graph.py::oad_graph(",
+        "core/knowledge_graph.py::mport sys"
+      ]
+    },
+    "core/parse_ast.py": {
+      "language": "python",
+      "symbol_count": 20,
+      "symbols": [
+        "core/parse_ast.py::from pathlib import Path",
+        "core/parse_ast.py::from typing import Dict, List, Optional, Any",
+        "core/parse_ast.py::from tree_sitter import Language, Parser, Tree",
+        "core/parse_ast.py::from tree_sitter_python import language as python_lang",
+        "core/parse_ast.py::from tree_sitter_javascript import language as js_lang",
+        "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx",
+        "core/parse_ast.py::from tree_sitter_rust import language as rust_lang",
+        "core/parse_ast.py::_get_parser",
+        "core/parse_ast.py::run",
+        "core/parse_ast.py::_get_node_text",
+        "core/parse_ast.py::_extract_python_symbols",
+        "core/parse_ast.py::traverse",
+        "core/parse_ast.py::_extract_js_ts_symbols",
+        "core/parse_ast.py::traverse",
+        "core/parse_ast.py::_extract_rust_symbols",
+        "core/parse_ast.py::traverse",
+        "core/parse_ast.py::extract_symbols",
+        "core/parse_ast.py::get_file_structure",
+        "core/parse_ast.py::simplify_tree",
+        "core/parse_ast.py::mport json"
+      ]
+    },
+    "core/read_file.py": {
+      "language": "python",
+      "symbol_count": 3,
+      "symbols": [
+        "core/read_file.py::from pathlib import Path",
+        "core/read_file.py::run",
+        "core/read_file.py::run_safe"
+      ]
+    },
+    "core/run_terminal.py": {
+      "language": "python",
+      "symbol_count": 4,
+      "symbols": [
+        "core/run_terminal.py::import subprocess",
+        "core/run_terminal.py::run",
+        "core/run_terminal.py::run_safe",
+        "core/run_terminal.py::run_async"
+      ]
+    },
+    "core/search.py": {
+      "language": "python",
+      "symbol_count": 5,
+      "symbols": [
+        "core/search.py::import subprocess",
+        "core/search.py::from pathlib import Path",
+        "core/search.py::run",
+        "core/search.py::un_safe(",
+        "core/search.py::arch_files(e"
+      ]
+    },
+    "core/write_file.py": {
+      "language": "python",
+      "symbol_count": 3,
+      "symbols": [
+        "core/write_file.py::from pathlib import Path",
+        "core/write_file.py::run",
+        "core/write_file.py::run_safe"
+      ]
+    }
+  },
+  "symbols": {
+    "core/git_patch.py::import subprocess": {
+      "id": "core/git_patch.py::import subprocess",
+      "name": "import subprocess",
+      "type": "import",
+      "file": "core/git_patch.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/git_patch.py::from pathlib import Path": {
+      "id": "core/git_patch.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/git_patch.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/git_patch.py::apply_patch": {
+      "id": "core/git_patch.py::apply_patch",
+      "name": "apply_patch",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/git_patch.py::create_patch": {
+      "id": "core/git_patch.py::create_patch",
+      "name": "create_patch",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 41,
+      "column": 0
+    },
+    "core/git_patch.py::import difflib": {
+      "id": "core/git_patch.py::import difflib",
+      "name": "import difflib",
+      "type": "import",
+      "file": "core/git_patch.py",
+      "line": 53,
+      "column": 4
+    },
+    "core/git_patch.py::revert_patch": {
+      "id": "core/git_patch.py::revert_patch",
+      "name": "revert_patch",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 69,
+      "column": 0
+    },
+    "core/git_patch.py::get_diff": {
+      "id": "core/git_patch.py::get_diff",
+      "name": "get_diff",
+      "type": "function",
+      "file": "core/git_patch.py",
+      "line": 96,
+      "column": 0
+    },
+    "core/knowledge_graph.py::import json": {
+      "id": "core/knowledge_graph.py::import json",
+      "name": "import json",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from pathlib import Path": {
+      "id": "core/knowledge_graph.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any": {
+      "id": "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any",
+      "name": "from typing import Dict, List, Optional, Set, Any",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from datetime import datetime": {
+      "id": "core/knowledge_graph.py::from datetime import datetime",
+      "name": "from datetime import datetime",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP": {
+      "id": "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+      "name": "from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 17,
+      "column": 4
+    },
+    "core/knowledge_graph.py::get_project_files": {
+      "id": "core/knowledge_graph.py::get_project_files",
+      "name": "get_project_files",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 23,
+      "column": 0
+    },
+    "core/knowledge_graph.py::uild_graph(": {
+      "id": "core/knowledge_graph.py::uild_graph(",
+      "name": "uild_graph(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 84,
+      "column": 0
+    },
+    "core/knowledge_graph.py::uery_symbol(": {
+      "id": "core/knowledge_graph.py::uery_symbol(",
+      "name": "uery_symbol(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 178,
+      "column": 0
+    },
+    "core/knowledge_graph.py::et_file_symbols(": {
+      "id": "core/knowledge_graph.py::et_file_symbols(",
+      "name": "et_file_symbols(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 196,
+      "column": 0
+    },
+    "core/knowledge_graph.py::xport_graph(": {
+      "id": "core/knowledge_graph.py::xport_graph(",
+      "name": "xport_graph(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 217,
+      "column": 0
+    },
+    "core/knowledge_graph.py::oad_graph(": {
+      "id": "core/knowledge_graph.py::oad_graph(",
+      "name": "oad_graph(",
+      "type": "function",
+      "file": "core/knowledge_graph.py",
+      "line": 236,
+      "column": 0
+    },
+    "core/knowledge_graph.py::mport sys": {
+      "id": "core/knowledge_graph.py::mport sys",
+      "name": "mport sys",
+      "type": "import",
+      "file": "core/knowledge_graph.py",
+      "line": 256,
+      "column": 4
+    },
+    "core/parse_ast.py::from pathlib import Path": {
+      "id": "core/parse_ast.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/parse_ast.py::from typing import Dict, List, Optional, Any": {
+      "id": "core/parse_ast.py::from typing import Dict, List, Optional, Any",
+      "name": "from typing import Dict, List, Optional, Any",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 12,
+      "column": 0
+    },
+    "core/parse_ast.py::from tree_sitter import Language, Parser, Tree": {
+      "id": "core/parse_ast.py::from tree_sitter import Language, Parser, Tree",
+      "name": "from tree_sitter import Language, Parser, Tree",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 15,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_python import language as python_lang": {
+      "id": "core/parse_ast.py::from tree_sitter_python import language as python_lang",
+      "name": "from tree_sitter_python import language as python_lang",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 16,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_javascript import language as js_lang": {
+      "id": "core/parse_ast.py::from tree_sitter_javascript import language as js_lang",
+      "name": "from tree_sitter_javascript import language as js_lang",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 17,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx": {
+      "id": "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx",
+      "name": "from tree_sitter_typescript import language_typescript, language_tsx",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 18,
+      "column": 4
+    },
+    "core/parse_ast.py::from tree_sitter_rust import language as rust_lang": {
+      "id": "core/parse_ast.py::from tree_sitter_rust import language as rust_lang",
+      "name": "from tree_sitter_rust import language as rust_lang",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 19,
+      "column": 4
+    },
+    "core/parse_ast.py::_get_parser": {
+      "id": "core/parse_ast.py::_get_parser",
+      "name": "_get_parser",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 40,
+      "column": 0
+    },
+    "core/parse_ast.py::run": {
+      "id": "core/parse_ast.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 66,
+      "column": 0
+    },
+    "core/parse_ast.py::_get_node_text": {
+      "id": "core/parse_ast.py::_get_node_text",
+      "name": "_get_node_text",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 111,
+      "column": 0
+    },
+    "core/parse_ast.py::_extract_python_symbols": {
+      "id": "core/parse_ast.py::_extract_python_symbols",
+      "name": "_extract_python_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 116,
+      "column": 0
+    },
+    "core/parse_ast.py::traverse": {
+      "id": "core/parse_ast.py::traverse",
+      "name": "traverse",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 224,
+      "column": 4
+    },
+    "core/parse_ast.py::_extract_js_ts_symbols": {
+      "id": "core/parse_ast.py::_extract_js_ts_symbols",
+      "name": "_extract_js_ts_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 168,
+      "column": 0
+    },
+    "core/parse_ast.py::_extract_rust_symbols": {
+      "id": "core/parse_ast.py::_extract_rust_symbols",
+      "name": "_extract_rust_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 220,
+      "column": 0
+    },
+    "core/parse_ast.py::extract_symbols": {
+      "id": "core/parse_ast.py::extract_symbols",
+      "name": "extract_symbols",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 272,
+      "column": 0
+    },
+    "core/parse_ast.py::get_file_structure": {
+      "id": "core/parse_ast.py::get_file_structure",
+      "name": "get_file_structure",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 311,
+      "column": 0
+    },
+    "core/parse_ast.py::simplify_tree": {
+      "id": "core/parse_ast.py::simplify_tree",
+      "name": "simplify_tree",
+      "type": "function",
+      "file": "core/parse_ast.py",
+      "line": 326,
+      "column": 4
+    },
+    "core/parse_ast.py::mport json": {
+      "id": "core/parse_ast.py::mport json",
+      "name": "mport json",
+      "type": "import",
+      "file": "core/parse_ast.py",
+      "line": 347,
+      "column": 4
+    },
+    "core/read_file.py::from pathlib import Path": {
+      "id": "core/read_file.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/read_file.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/read_file.py::run": {
+      "id": "core/read_file.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/read_file.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/read_file.py::run_safe": {
+      "id": "core/read_file.py::run_safe",
+      "name": "run_safe",
+      "type": "function",
+      "file": "core/read_file.py",
+      "line": 30,
+      "column": 0
+    },
+    "core/run_terminal.py::import subprocess": {
+      "id": "core/run_terminal.py::import subprocess",
+      "name": "import subprocess",
+      "type": "import",
+      "file": "core/run_terminal.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/run_terminal.py::run": {
+      "id": "core/run_terminal.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/run_terminal.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/run_terminal.py::run_safe": {
+      "id": "core/run_terminal.py::run_safe",
+      "name": "run_safe",
+      "type": "function",
+      "file": "core/run_terminal.py",
+      "line": 37,
+      "column": 0
+    },
+    "core/run_terminal.py::run_async": {
+      "id": "core/run_terminal.py::run_async",
+      "name": "run_async",
+      "type": "function",
+      "file": "core/run_terminal.py",
+      "line": 67,
+      "column": 0
+    },
+    "core/search.py::import subprocess": {
+      "id": "core/search.py::import subprocess",
+      "name": "import subprocess",
+      "type": "import",
+      "file": "core/search.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/search.py::from pathlib import Path": {
+      "id": "core/search.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/search.py",
+      "line": 11,
+      "column": 0
+    },
+    "core/search.py::run": {
+      "id": "core/search.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/search.py",
+      "line": 14,
+      "column": 0
+    },
+    "core/search.py::un_safe(": {
+      "id": "core/search.py::un_safe(",
+      "name": "un_safe(",
+      "type": "function",
+      "file": "core/search.py",
+      "line": 36,
+      "column": 0
+    },
+    "core/search.py::arch_files(e": {
+      "id": "core/search.py::arch_files(e",
+      "name": "arch_files(e",
+      "type": "function",
+      "file": "core/search.py",
+      "line": 64,
+      "column": 0
+    },
+    "core/write_file.py::from pathlib import Path": {
+      "id": "core/write_file.py::from pathlib import Path",
+      "name": "from pathlib import Path",
+      "type": "import",
+      "file": "core/write_file.py",
+      "line": 10,
+      "column": 0
+    },
+    "core/write_file.py::run": {
+      "id": "core/write_file.py::run",
+      "name": "run",
+      "type": "function",
+      "file": "core/write_file.py",
+      "line": 13,
+      "column": 0
+    },
+    "core/write_file.py::run_safe": {
+      "id": "core/write_file.py::run_safe",
+      "name": "run_safe",
+      "type": "function",
+      "file": "core/write_file.py",
+      "line": 34,
+      "column": 0
+    }
+  },
+  "relations": [
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::import subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::apply_patch",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::create_patch",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::import difflib",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::revert_patch",
+      "type": "contains"
+    },
+    {
+      "from": "core/git_patch.py",
+      "to": "core/git_patch.py::get_diff",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::import json",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from typing import Dict, List, Optional, Set, Any",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from datetime import datetime",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::from core.parse_ast import extract_symbols, LANGUAGE_MAP",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::get_project_files",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::uild_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::uery_symbol(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::et_file_symbols(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::xport_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::oad_graph(",
+      "type": "contains"
+    },
+    {
+      "from": "core/knowledge_graph.py",
+      "to": "core/knowledge_graph.py::mport sys",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from typing import Dict, List, Optional, Any",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter import Language, Parser, Tree",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_python import language as python_lang",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_javascript import language as js_lang",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_typescript import language_typescript, language_tsx",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::from tree_sitter_rust import language as rust_lang",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_get_parser",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_get_node_text",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_extract_python_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::traverse",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_extract_js_ts_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::traverse",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::_extract_rust_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::traverse",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::extract_symbols",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::get_file_structure",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::simplify_tree",
+      "type": "contains"
+    },
+    {
+      "from": "core/parse_ast.py",
+      "to": "core/parse_ast.py::mport json",
+      "type": "contains"
+    },
+    {
+      "from": "core/read_file.py",
+      "to": "core/read_file.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/read_file.py",
+      "to": "core/read_file.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/read_file.py",
+      "to": "core/read_file.py::run_safe",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::import subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::run_safe",
+      "type": "contains"
+    },
+    {
+      "from": "core/run_terminal.py",
+      "to": "core/run_terminal.py::run_async",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::import subprocess",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::un_safe(",
+      "type": "contains"
+    },
+    {
+      "from": "core/search.py",
+      "to": "core/search.py::arch_files(e",
+      "type": "contains"
+    },
+    {
+      "from": "core/write_file.py",
+      "to": "core/write_file.py::from pathlib import Path",
+      "type": "contains"
+    },
+    {
+      "from": "core/write_file.py",
+      "to": "core/write_file.py::run",
+      "type": "contains"
+    },
+    {
+      "from": "core/write_file.py",
+      "to": "core/write_file.py::run_safe",
+      "type": "contains"
+    }
+  ]
+}

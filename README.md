@@ -32,6 +32,8 @@ No buggy extensions. Just tools acting on filesystem and terminal. Stable, unive
 - `run_terminal` — Execute shell commands
 - `search` — Search code with ripgrep
 - `git_patch` — Apply incremental changes
+- `parse_ast` — Parse code and extract symbols (functions, classes, imports)
+- `knowledge_graph` — Build code relationship graph
 
 **VS Code Extension:**
 - Local HTTP server on port 18790
@@ -54,18 +56,23 @@ OpenClaw / Ollama / LM Studio / Local Models
 ```
 Ganghero/
 ├── core/                  # Model-independent tools
-│   ├── read_file.py
-│   ├── write_file.py
-│   ├── run_terminal.py
-│   ├── search.py
-│   └── git_patch.py
+│   ├── read_file.py       # Read file contents
+│   ├── write_file.py      # Write content to file
+│   ├── run_terminal.py    # Execute shell commands
+│   ├── search.py          # Search with ripgrep
+│   ├── git_patch.py       # Apply git patches
+│   ├── parse_ast.py       # Parse AST (Python, JS, TS, Rust)
+│   └── knowledge_graph.py # Build code knowledge graph
 ├── adapters/              # AI backend adapters
-├── projects/               # Project-specific configs
-├── vscode-extension/       # VS Code bridge
+├── projects/              # Project-specific configs
+│   └── ganghero_graph.json # Generated knowledge graph
+├── vscode-extension/      # VS Code bridge
 │   ├── src/extension.ts
 │   ├── package.json
 │   └── ganghero-bridge-0.1.0.vsix
-└── Documenti/              # Documentation
+├── venv/                  # Python virtual environment
+└── Documenti/             # Documentation
+    └── Ganghero_scaletta.json
 ```
 
 ## DEVELOPMENT PHASES
@@ -78,12 +85,26 @@ Ganghero/
 - VS Code extension with HTTP server
 - Installed and active on port 18790
 
-### PHASE 3 - ADVANCED ⏳ TO DO
-- Tree-sitter for AST parsing
-- Code knowledge graph
-- Agent operational loop
+### PHASE 3 - ADVANCED 🟡 IN PROGRESS
+- ✅ Tree-sitter for AST parsing (Python, JavaScript, TypeScript, Rust)
+- ✅ Code knowledge graph with symbol relationships
+- ⏳ Automatic project indexing
+- ⏳ Agent operational loop (plan → execute → observe → save)
 
-## AUTHORS
+## QUICK START
+
+```bash
+# 1. Enter the project
+cd /home/carlo/progetti/Ganghero
+
+# 2. Activate virtual environment (required for parse_ast)
+source venv/bin/activate
+
+# 3. Test the tools
+python3 -c "from core.read_file import run; print(run('README.md'))"
+python3 -c "from core.parse_ast import extract_symbols; print(extract_symbols('core/read_file.py'))"
+python3 -c "from core.knowledge_graph import build_graph; print(build_graph('.', languages=['python']))"
+```
 
 **Aura & Carlo**  
 Created: March 13, 2026  

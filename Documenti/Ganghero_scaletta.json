@@ -51,11 +51,6 @@
       ]
     },
     {
-      "id": "col-1",
-      "title": "🔴 FASE 1 - Fondamenta (Avviare per primo)",
-      "cards": []
-    },
-    {
       "id": "col-6",
       "title": "✅ Completato FASE1",
       "cards": [
@@ -82,13 +77,8 @@
       ]
     },
     {
-      "id": "col-2",
-      "title": "🟡 FASE 2 - Bridge VS Code (Dopo FASE 1)",
-      "cards": []
-    },
-    {
       "id": "1773421562229",
-      "title": "Completato FASE2",
+      "title": "Completato FASE2 - Bridge VS Code",
       "cards": [
         {
           "id": "card-201",
@@ -118,11 +108,11 @@
       "cards": [
         {
           "id": "card-301",
-          "text": "Integrare tree-sitter per parsing AST"
+          "text": "✅ Integrare tree-sitter per parsing AST"
         },
         {
           "id": "card-302",
-          "text": "Costruire knowledge graph del codice"
+          "text": "✅ Costruire knowledge graph del codice"
         },
         {
           "id": "card-303",
@@ -170,12 +160,12 @@
   "cards": {
     "card-101": {
       "created": 1742588400000,
-      "modified": 1742588400000,
+      "modified": 1773476534319,
       "note": "Creare la struttura:\nGanghero/\n├── core/          # Tool indipendenti dal modello\n├── adapters/      # Adattatori per OpenClaw, Ollama, ecc.\n├── projects/      # Configurazioni per progetti specifici\n└── Documenti/     # Chat, riferimenti"
     },
     "card-102": {
       "created": 1742588400000,
-      "modified": 1742588400000,
+      "modified": 1773476506083,
       "note": "Tool Python per leggere file.\nCodice:\n```python\nfrom pathlib import Path\n\ndef run(path):\n    return Path(path).read_text()\n```\nSalvare in: Ganghero/core/read_file.py"
     },
     "card-103": {
@@ -284,5 +274,5 @@
       "note": ""
     }
   },
-  "exportedAt": "2026-03-13T17:33:08.054Z"
+  "exportedAt": "2026-03-14T08:27:59.194Z"
 }
