@@ -23,6 +23,13 @@ try:
 except ImportError:
     WATCHDOG_AVAILABLE = False
 
+# Notifiche desktop (opzionale)
+try:
+    import notify2
+    NOTIFY_AVAILABLE = True
+except ImportError:
+    NOTIFY_AVAILABLE = False
+
 from core.knowledge_graph import build_graph, export_graph
 
 
@@ -64,6 +71,44 @@ class ProjectEventHandler(FileSystemEventHandler):
         return True
 
 
+def notify_desktop(title: str, message: str, timeout: int = 5000) -> bool:
+    """
+    Mostra una notifica desktop.
+    
+    Args:
+        title: Titolo della notifica
+        message: Messaggio della notifica
+        timeout: Millisecondi di visualizzazione (default: 5000)
+    
+    Returns:
+        True se la notifica è stata mostrata
+    """
+    # Prova notify2 (Python)
+    if NOTIFY_AVAILABLE:
+        try:
+            if not notify2.is_initted():
+                notify2.init("Ganghero Indexer")
+            
+            notification = notify2.Notification(title, message)
+            notification.set_timeout(timeout)
+            notification.show()
+            return True
+        except Exception:
+            pass  # Fallback a notify-send
+    
+    # Fallback: notify-send (comando di sistema)
+    try:
+        import subprocess
+        subprocess.run(
+            ["notify-send", "-t", str(timeout), title, message],
+            capture_output=True,
+            check=True
+        )
+        return True
+    except Exception:
+        return False
+
+
 class ProjectIndexer:
     """
     Indicizzatore automatico del progetto.
@@ -86,6 +131,11 @@ class ProjectIndexer:
         self._running = False
         self._observer: Optional[Observer] = None
         self._last_graph: Optional[Dict] = None
+        
+        # Rate limiting notifiche (max 1 ogni 30 secondi)
+        self._last_notification_time: float = 0
+        self._notification_cooldown: float = 30.0
+        self._pending_changes: List[str] = []
         
         if output_path is None:
             self.output_path = self.project_path.parent / "projects" / f"{self.project_path.name}_auto.json"
@@ -138,7 +188,50 @@ class ProjectIndexer:
         if changes and self.on_change:
             self.on_change(changes)
         
+        # Notifica desktop (con rate limiting)
+        self._send_notification(changes)
+        
         self._last_graph = new_graph
+    
+    def _send_notification(self, changes: Dict[str, Any]):
+        """Invia notifica desktop con rate limiting."""
+        if not changes or changes.get("type") == "initial":
+            return
+        
+        now = time.time()
+        if now - self._last_notification_time < self._notification_cooldown:
+            # Accumula cambiamenti per la prossima notifica
+            if changes.get("added"):
+                self._pending_changes.extend([f"+{f}" for f in changes["added"]])
+            if changes.get("modified"):
+                self._pending_changes.extend([f"~{f}" for f in changes["modified"]])
+            if changes.get("removed"):
+                self._pending_changes.extend([f"-{f}" for f in changes["removed"]])
+            return
+        
+        # Prepara messaggio
+        parts = []
+        if changes.get("added"):
+            parts.append(f"+{len(changes['added'])} file")
+        if changes.get("modified"):
+            parts.append(f"~{len(changes['modified'])} file")
+        if changes.get("removed"):
+            parts.append(f"-{len(changes['removed'])} file")
+        
+        # Aggiungi cambiamenti pendenti
+        if self._pending_changes:
+            parts.append(f"(+{len(self._pending_changes)} precedenti)")
+            self._pending_changes = []
+        
+        if parts:
+            message = ", ".join(parts)
+            project_name = self.project_path.name
+            notify_desktop(
+                f"Ganghero: {project_name}",
+                f"Knowledge graph aggiornato: {message}",
+                timeout=5000
+            )
+            self._last_notification_time = now
     
     def _detect_changes(self, new_graph: Dict) -> Dict[str, Any]:
         """Rileva cosa è cambiato rispetto al grafo precedente."""
