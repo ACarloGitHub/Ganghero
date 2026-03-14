@@ -393,6 +393,49 @@ def cli_switch(project_name: str):
         print(f"❌ Project not found: {project_name}")
 
 
+def cli_list_projects():
+    """Lista progetti gestiti da Ganghero."""
+    config = Config()
+    projects = config.get_active_projects()
+    
+    if not projects:
+        print("Nessun progetto gestito da Ganghero.")
+        return
+    
+    print("Progetti:")
+    for p in projects:
+        print(f"  - {p['name']}")
+
+
+def cli_remove_project(project_name: str):
+    """Rimuove progetto e cancella la sua memoria."""
+    config = Config()
+    
+    # Trova il progetto
+    project = None
+    for p in config.get_active_projects():
+        if p['name'] == project_name:
+            project = p
+            break
+    
+    if not project:
+        print(f"❌ Progetto non trovato: {project_name}")
+        return
+    
+    # Cancella memoria del progetto
+    import shutil
+    memory_path = config.get_project_memory_path(project['path'])
+    if memory_path.exists():
+        shutil.rmtree(memory_path)
+        print(f"🗑️  Memoria cancellata: {memory_path}")
+    
+    # Rimuovi dalla lista
+    if config.remove_active_project(project_name):
+        print(f"✅ Progetto eliminato: {project_name}")
+    else:
+        print(f"❌ Errore nella rimozione: {project_name}")
+
+
 if __name__ == "__main__":
     import sys
     
@@ -415,6 +458,10 @@ if __name__ == "__main__":
         cli_add_project(sys.argv[2], name)
     elif command == "switch" and len(sys.argv) > 2:
         cli_switch(sys.argv[2])
+    elif command in ("list-projects", "projects"):
+        cli_list_projects()
+    elif command in ("rm", "remove-project") and len(sys.argv) > 2:
+        cli_remove_project(sys.argv[2])
     else:
         print("Usage: python3 config.py [command] [args]")
         print("Commands:")
@@ -424,3 +471,5 @@ if __name__ == "__main__":
         print("  sandbox <mode>            Set sandbox mode (strict/prompt/permissive)")
         print("  add-project <path> [name] Add active project")
         print("  switch <name>             Switch to project")
+        print("  list-projects (projects)  List all projects")
+        print("  rm <name>                 Remove project and its memory")
