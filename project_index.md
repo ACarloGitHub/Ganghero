@@ -26,6 +26,11 @@ Ganghero/
 | `read_file` | `core/read_file.py` | Legge contenuto di un file |
 | `write_file` | `core/write_file.py` | Scrive contenuto in un file |
 | `run_terminal` | `core/run_terminal.py` | Esegue comandi shell |
+| `search` | `core/search.py` | Ricerca codice con ripgrep |
+| `git_patch` | `core/git_patch.py` | Applica patch incrementali |
+| `parse_ast` | `core/parse_ast.py` | Estrae simboli da codice (AST) |
+| `knowledge_graph` | `core/knowledge_graph.py` | Costruisce grafo relazioni codice |
+| `indexer` | `core/indexer.py` | Monitora file e aggiorna grafo automaticamente |
 
 ## Comandi
 
